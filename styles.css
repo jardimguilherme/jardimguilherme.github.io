@@ -16,12 +16,14 @@ body {
   min-height: 2vh;
   max-height: 4vh;
   margin-left: 30px;
+  /* text-align: center; */
 }
 
 h1 {
   color: #4caf50;
   font-size: 40px;
   margin-top: 0px;
+  font-family: 'Major Mono Display', monospace;
 }
 
 .mid {
