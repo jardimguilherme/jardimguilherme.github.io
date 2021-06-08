@@ -81,6 +81,8 @@ h2 {
   border-radius: 10px;
   padding: 5px;
   text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .bottom {
