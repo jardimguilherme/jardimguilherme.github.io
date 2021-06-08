@@ -10,7 +10,7 @@ body {
   margin-left: 5;
   margin-right: 5;
   overflow: hidden;
-  background-color: red;
+  background-color: #fafafa;
 }
 
 .top {
@@ -38,6 +38,7 @@ h1 {
   margin-top: 35px;
   margin-left: 30px;
   margin-right: 30px;
+  filter: drop-shadow(3px 3px 2px lightgray);
 }
 
 .left {
@@ -102,6 +103,7 @@ h2 {
   margin: 4px 2px;
   max-height: fit-content;
   text-align: center;
+  filter: drop-shadow(3px 3px 2px lightgray);
 }
 
 .button:hover {
