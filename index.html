@@ -5,14 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <script type="text/javascript" src="getData.js"></script>
-    <script type="text/javascript" src="next.js"></script>
-    <script type="text/javascript" src="previous.js"></script>
+    <script type="text/javascript" src="JS/getData.js"></script>
+    <script type="text/javascript" src="JS/scripts.js"></script>
+    <script type="text/javascript" src="JS/createJson.js"></script>
+    <script type="text/javascript" src="JS/FileSaver.min.js"></script>
+    <script type="text/javascript" src="JS/fileDownload.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap"
-      rel="stylesheet"
-    />
+    
     <title>PP Viewer</title>
   </head>
   <body onload="getData(0)">
@@ -31,13 +30,93 @@
           <div id="app-title" class="data"></div>
           <h2>Language:</h2>
           <div id="app-lang" class="data"></div>
+          <form class="options">
+              <input
+                type="checkbox"
+                id="captcha"
+                name="options"
+                value="captcha"
+              />
+              <label for="captcha">Captcha</label
+              ><br /><br />
+              <input
+                type="checkbox"
+                id="cookies"
+                name="options"
+                value="cookies"
+              />
+              <label for="cookies">Cookies</label
+              ><br /><br />
+              <input
+                type="checkbox"
+                id="linksAtPageBottom"
+                name="options"
+                value="linksAtPageBottom"
+              />
+              <label for="linksAtPageBottom"
+                >Links no Fim da Página</label
+              ><br /><br />
+              <input
+                type="checkbox"
+                id="featureList"
+                name="options"
+                value="featureList"
+              />
+              <label for="featureList"
+                >Lista de Features</label
+              ><br /><br />
+              <input
+                type="checkbox"
+                id="languageList"
+                name="options"
+                value="languageList"
+              />
+              <label for="languageList"
+                >Lista de Idiomas</label
+              ><br /><br />
+              <input
+                type="checkbox"
+                id="appList"
+                name="options"
+                value="appList"
+              />
+              <label for="appList"
+                >Lista de Apps</label
+              ><br /><br />
+              <input
+                type="checkbox"
+                id="qa"
+                name="options"
+                value="qa"
+              />
+              <label for="qa">Q/A</label>
+          </form>
         </div>
       </div>
     </div>
     <div class="bottom">
-      <button class="button" onclick="previous()">←</button>
-      <button class="button" onclick="next()">→</button>
+      <button class="button previous-button" onclick="previous()">←</button>
+      <button class="button" onclick="createJson()">Salvar</button>
+      <button class="button save-button">Baixar</button>
+      <button class="button next-button" onclick="next()">→</button>
     </div>
     <div id="id">0</div>
+
+    <script>
+      const arrayGlobal = [];
+
+      document.querySelector(".save-button").addEventListener("click", (e) => {
+        e.preventDefault();
+        var array = JSON.stringify(arrayGlobal);
+        stringToFile(array);
+      });
+
+      document
+        .querySelector(".next-button")
+        .addEventListener("click", uncheckAll);
+      document
+        .querySelector(".previous-button")
+        .addEventListener("click", uncheckAll);
+    </script>
   </body>
 </html>

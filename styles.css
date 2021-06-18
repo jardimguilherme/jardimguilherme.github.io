@@ -24,7 +24,7 @@ h1 {
   color: #d596e8;
   font-size: 40px;
   margin-top: 0px;
-  font-family: 'Major Mono Display', monospace;
+  font-family: "Major Mono Display", monospace;
 }
 
 .mid {
@@ -119,7 +119,12 @@ h2 {
   text-align: center;
 }
 
-@media screen and (max-width: 1200){
+.options {
+  margin-top: 5%;
+  color: #4caf50;
+}
+
+@media screen and (max-width: 1200) {
   .mid {
     display: flex;
     flex: 1;
