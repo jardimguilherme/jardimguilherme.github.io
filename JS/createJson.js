@@ -1,4 +1,4 @@
-const createJson = () => {
+const createJson = (policy) => {
     var isCaptcha = -1;
     var isCookies = -1;
     var isLinksAtPageBottom = -1;
@@ -14,6 +14,7 @@ const createJson = () => {
     document.getElementById('languageList').checked ? isLanguageList = 1 : isLanguageList = 0;
     document.getElementById('appList').checked ? isAppList = 1 : isAppList = 0;
     document.getElementById('qa').checked ? isQa = 1 : isQa = 0;
+    document.getElementById
 
     var title = document.getElementById('app-title').innerHTML;
     var lang = document.getElementById('app-lang').innerHTML;
@@ -24,6 +25,7 @@ const createJson = () => {
         'Title': title,
         'Lang': lang,
         'Content': content,
+        'isPolicy': policy,
         'isCaptcha': isCaptcha,
         'isCookies': isCookies,
         'isLinksAtPageBottom': isLinksAtPageBottom,
